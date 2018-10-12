@@ -13,6 +13,19 @@ class App < Sinatra::Base
     "Hello #{@user_name}!"
   end
 
+  # get '/search?' do
+  #   "search page"
+  #   params['q']
+  # end
+
   # Code your final two routes here:
+
+  get '/goodbye/:name' do
+    "Goodbye, #{params[:name]}."
+  end
+
+  get '/multiply/:num1/:num2' do
+    "The proudct of #{params[:num1]} and #{params[:num2]} is #{params[:num1].to_i*params[:num2].to_i}"
+  end
 
 end
